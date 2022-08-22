@@ -17,7 +17,7 @@
 
 # Silo mentality
 
-<img src="../assets/silos.svg" onerror="this.onerror=null; this.src='../../assets/silos.svg'" style="max-height: 50vh; object-fit: contain;"/>
+![silos](https://raw.githubusercontent.com/DanySK/shared-slides/14156e4740992d1fc1ffc62c53aaae2bc21c2729/devops/silos.svg)
 
 ---
 
