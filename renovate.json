@@ -7,12 +7,13 @@
         {
           "fileMatch": ["^.*\\.md$"],
           "matchStrings": [
-              "(<!--\\s*from-branch:\\s*(?<branch>[^\\s]+)\\s*-->)?\\s*!\\[(?<imageName>.*)\\]\\(https:\\/\\/raw\\.githubusercontent\\.com\\/(?<slug>(?<owner>[^\\/]+)\\/(?<repo>[^\\/]+))\\/(?<currentDigest>[^\\/]+)\\/(?<path>.+)\\)"
+              "(?<comment><!--\\s*from-branch:\\s*(?<branch>[^\\s]+)\\s*-->)?\\s*!\\[(?<imageName>.*)\\]\\(https:\\/\\/raw\\.githubusercontent\\.com\\/(?<slug>(?<owner>[^\\/]+)\\/(?<repo>[^\\/]+))\\/(?<currentDigest>[^\\/]+)\\/(?<path>.+)\\)"
           ],
           "depNameTemplate": "image {{#if imageName}}{{{imageName}}}{{else}}{{{slug}}}/{{{path}}}{{/if}}",
           "currentValueTemplate": "{{#if branch}}{{{branch}}}{{else}}images{{/if}}",
           "packageNameTemplate": "https://github.com/{{{slug}}}.git",
           "datasourceTemplate": "git-refs",
+          "autoReplaceStringTemplate": "{{{comment}}}\n[{{{imageName}}}](https://raw.githubusercontent.com/{{{slug}}}/{{{newDigest}}}/{{{path}}})",
           "versioningTemplate": "git"
         }
     ]
