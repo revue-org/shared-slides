@@ -23,7 +23,7 @@
 
 # **No** silos
 
-<img src="../assets/no-silos.svg" onerror="this.onerror=null; this.src='../../assets/no-silos.svg'" style="max-height: 50vh; object-fit: contain;"/>
+![silos](https://raw.githubusercontent.com/DanySK/shared-slides/62522124c1ee8be3d463291707b974ff32518d78/devops/no-silos.svg)
 
 ---
 
