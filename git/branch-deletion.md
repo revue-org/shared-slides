@@ -34,11 +34,9 @@ flowchart RL
   class C1,C2,C3,C4,C5,C6,C7,C8,C9,C10,C11,C12,C13 commit;
 ```
 
-{{% fragment %}}
 ⬇️ `git branch -d fix/bug22` ⬇️
-{{% /fragment %}}
 
-{{% fragment %}}
+
 ```mermaid
 flowchart RL
   HEAD{{"HEAD"}}
@@ -59,12 +57,7 @@ flowchart RL
   class C1,C2,C3,C4,C5,C6,C7,C8,C9,C10,C11,C12,C13 commit;
 ```
 No commit is lost, branch `fix/bug22` is removed
-{{% /fragment %}}
 
-{{% fragment %}}
 What about `git branch -d feat/serverless`?
-{{% /fragment %}}
 
-{{% fragment %}}
-it would **fail** with an error message, as `11` would be lost
-{{% /fragment %}}
+It would **fail** with an error message, as `11` would be lost
