@@ -149,7 +149,7 @@ commit
 
 ---
 
-## Git flow: hotifx branches
+## Git flow: hotfix branches
 
 sprouts from `master` $\Rightarrow$ dies in `master` and `develop`
 
