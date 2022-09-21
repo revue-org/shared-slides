@@ -1,0 +1,23 @@
+name: Test the ruby generator
+
+on:
+  push:
+  pull-request:
+
+jobs:
+  markdown-link-check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3.0.2
+      with:
+        path: shared-slides
+    - uses: actions/checkout@v3.0.2
+      with:
+        repository: DanySK/Course-DTM-SE-3
+        path: target
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1.117.0
+      with:
+        working-directory: shared-slides
+    - name: Run tests
+      run: shared-slides/preprocess.rb && [ -s target/content/dvcs-basics/_index.md ]
