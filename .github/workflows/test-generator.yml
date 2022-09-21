@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  markdown-link-check:
+  ruby-generator-test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3.0.2
