@@ -5,6 +5,7 @@ def warning(file)
 end
 
 files = Dir["content/**/*generator.md"]
+puts "Files to examine: #{files}"
 matcher = /<!--\s+write-here\s+"(?<path>[^"]+)"\s*-->(?<contents>.*?)<!--\s*end-write\s*-->/sum
 
 for file in files do
