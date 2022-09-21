@@ -3,6 +3,7 @@ name: Test the ruby generator
 on:
   push:
   pull-request:
+  workflow_dispatch:
 
 jobs:
   markdown-link-check:
