@@ -21,4 +21,7 @@ jobs:
       with:
         working-directory: shared-slides
     - name: Run tests
-      run: shared-slides/preprocess.rb && [ -s target/content/dvcs-basics/_index.md ]
+      run: |
+        ruby -c shared-slides/preprocess.rb
+        shared-slides/preprocess.rb
+        [ -s target/content/dvcs-basics/_index.md ]
