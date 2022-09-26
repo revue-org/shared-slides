@@ -1,9 +1,87 @@
+## Branches as labels
 
-## Creating branches
+To be able to start new development lines,
+we need to *create* a **branch**.
 
-To store our commits, we need to *create* a **branch**, then attach the `HEAD` by checking it out.
+In Git, branches work like *movable labels*:
+* Upon creation, they are attached to the same commit `HEAD` refers to
+* If a new commit is made when `HEAD` is attached to them, they **move along with `HEAD`**
 
-In Git, new branches are created with `git branch branch_name`
+---
+
+## Branch creation
+
+Branches are created with `git branch branch_name`
+
+```mermaid
+flowchart RL
+%%  HEAD{{"HEAD fas:fa-unlink"}}
+  HEAD{{"HEAD"}}
+  b1(master)
+
+  C10([10]) --> C9([9]) --> C8([8]) --> C7([7]) --> C6([6]) --> C5([5]) --> C4([4]) --> C3([3]) --> C2([2]) --> C1([1])
+
+  b1 -.-> C10
+
+  HEAD -.-> C10
+  HEAD --"fas:fa-link"--o b1
+
+  class HEAD head;
+  class b1,b2 branch;
+  class C1,C2,C3,C4,C5,C6,C7,C8,C9,C10 commit;
+```
+
+⬇️ `git branch new-experiment` ⬇️
+
+```mermaid
+flowchart RL
+%%  HEAD{{"HEAD fas:fa-unlink"}}
+  HEAD{{"HEAD"}}
+  b1(master)
+  b2(new-experiment)
+
+  C10([10]) --> C9([9]) --> C8([8]) --> C7([7]) --> C6([6]) --> C5([5]) --> C4([4]) --> C3([3]) --> C2([2]) --> C1([1])
+
+  b1 -.-> C10
+  b2 -.-> C10
+
+  HEAD -.-> C10
+  HEAD --"fas:fa-link"--o b1
+
+  class HEAD head;
+  class b1,b2 branch;
+  class C1,C2,C3,C4,C5,C6,C7,C8,C9,C10 commit;
+```
+
+`HEAD` does not attach to the new branch by default,
+an explicit `checkout` is required.
+
+---
+
+## Creating branches when in **DETACHED_HEAD**
+
+Creating new branches allows to store changes made when we are in **DETACHED_HEAD** state.
+
+```mermaid
+flowchart RL
+%%  HEAD{{"HEAD fas:fa-unlink"}}
+  HEAD{{"HEAD"}}
+  b1(master)
+
+  C10([10]) --> C9([9]) --> C8([8]) --> C7([7]) --> C6([6]) --> C5([5]) --> C4([4]) --> C3([3]) --> C2([2]) --> C1([1])
+
+  b1 -.-> C10
+
+  HEAD -.-> C10
+  HEAD --"fas:fa-link"--o b1
+
+  class HEAD head;
+  class b1,b2 branch;
+  class C1,C2,C3,C4,C5,C6,C7,C8,C9,C10 commit;
+```
+
+{{% fragment %}}
+⬇️ `git checkout HEAD~4` ⬇️
 
 ```mermaid
 flowchart RL
@@ -20,6 +98,17 @@ flowchart RL
   class b1,b2 branch;
   class C1,C2,C3,C4,C5,C6,C7,C8,C9,C10 commit;
 ```
+
+* **DETACHED_HEAD**: our changes will be discarded, unless...
+{{% /fragment %}}
+
+{{% fragment %}}
+➡️ Next: `git branch new-experiment` ➡️
+{{% /fragment %}}
+
+---
+
+## Creating branches when in **DETACHED_HEAD**
 
 ⬇️ `git branch new-experiment` ⬇️
 
@@ -41,27 +130,17 @@ flowchart RL
   class C1,C2,C3,C4,C5,C6,C7,C8,C9,C10 commit;
 ```
 
+{{% fragment %}}
+`HEAD` is still *detached* though, we need to *attach it to the new branch* for it to store our commits
+{{% /fragment %}}
+
+{{% fragment %}}
+➡️ Next: `git checkout new-experiment` ➡️
+{{% /fragment %}}
+
 ---
 
-## Creating branches
-
-```mermaid
-flowchart RL
-  HEAD{{"HEAD fas:fa-unlink"}}
-  b1(master)
-  b2("new-experiment")
-
-  C10([10]) --> C9([9]) --> C8([8]) --> C7([7]) --> C6([6]) --> C5([5]) --> C4([4]) --> C3([3]) --> C2([2]) --> C1([1])
-
-  b1 -.-> C10
-
-  HEAD -.-> C6
-  b2 -.-> C6
-
-  class HEAD head;
-  class b1,b2 branch;
-  class C1,C2,C3,C4,C5,C6,C7,C8,C9,C10 commit;
-```
+## Creating branches when in **DETACHED_HEAD**
 
 ⬇️ `git checkout -b new-experiment` ⬇️
 
@@ -84,13 +163,39 @@ flowchart RL
   class C1,C2,C3,C4,C5,C6,C7,C8,C9,C10 commit;
 ```
 
+* New commits will now be stored!
+
+⬇️ [changes] + `git add` + `git commit` ⬇️
+
+```mermaid
+flowchart RL
+  HEAD{{"HEAD"}}
+  b1(master)
+  b2("new-experiment")
+
+  C10([10]) --> C9([9]) --> C8([8]) --> C7([7]) --> C6([6]) --> C5([5]) --> C4([4]) --> C3([3]) --> C2([2]) --> C1([1])
+  C11([11]) --> C6
+
+  b1 -.-> C10
+
+  HEAD -.-> C11
+  HEAD --"fas:fa-link"--o b2
+  b2 -.-> C11
+
+  class HEAD head;
+  class b1,b2 branch;
+  class C1,C2,C3,C4,C5,C6,C7,C8,C9,C10,C11 commit;
+```
+
+$\Rightarrow$ `HEAD` brings our branch forward with it!
+
 ---
 
 ## One-shot branch creation
 
 As you can imagine, creating a *new branch* and *attaching `HEAD`* to the freshly created branch is pretty common
 
-Very common, a short-hand is provided: `git checkout -b new-branch-name`
+As customary for common operations, a short-hand is provided: `git checkout -b new-branch-name`
 * Creates `new-branch-name` from the current position of `HEAD`
 * Attaches `HEAD` to `new-branch-name`
 

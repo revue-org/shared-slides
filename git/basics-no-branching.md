@@ -128,6 +128,12 @@ bin/
 
 ---
 
+<!-- write-here "shared-slides/git/newlines.md" -->
+
+<!-- end-write -->
+
+---
+
 ## Dealing with removal and renaming of files
 
 * The removal of a file is a legit *change*
