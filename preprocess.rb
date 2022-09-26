@@ -4,7 +4,7 @@ def warning(file)
     "\n<!-- this file includes generated content. Do not edit. Edit #{file}, instead. -->\n"
 end
 
-files = Dir["content/**/*generator.md"]
+files = Dir["**/content/**/*generator.md"]
 puts "Files to examine: #{files}"
 matcher = /<!--\s+write-here\s+"(?<path>[^"]+)"\s*-->(?<contents>.*?)<!--\s*end-write\s*-->/sum
 
