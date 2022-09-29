@@ -550,6 +550,11 @@ Dato che il wrapper sa come scaricare ed installare Gradle, non occorre scaricar
 
 Wrapper pronto per esser scaricato:
 * https://github.com/DanySK/Gradle-Wrapper/archive/refs/heads/master.zip
+* **Attenzione**: su <i class="fab fa-linux"></i> e <i class="fab fa-apple"></i>,
+eseguire anche il comando `chmod +x gradlew` per rendere eseguibile lo script
+ * setta i permessi Unix per eseguire, il cui valore viene resettato dalla compressione in formato zip
+ * alternativamente, lo script va eseguito chiedendo all'interprete della linea di comando di interpretarlo
+  * `sh gradlew`
 
 ---
 
@@ -565,7 +570,7 @@ possiamo usarlo attraverso uno dei due script:
 #### **Nota**
 
 Su sistemi <i class="fab fa-linux"></i> e <i class="fab fa-apple"></i>
-per eseguire lo script occorre anche elencare il percorso corrente:
+per eseguire lo script occorre anche includere il percorso corrente:
 * `./gradlew`
 
 o, in alternativa, chiedere all'interprete dei comandi di eseguire
