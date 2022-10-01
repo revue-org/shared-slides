@@ -106,7 +106,8 @@ Un **task** in Gradle rappresenta una *singola operazione atomica* del processo 
 * *atomica* $\rightarrow$ indivisibile: un task comincia e finisce senza interruzione
 
 Qualunque esecuzione di Gradle richiede di specificare uno o più **task**, ad esempio:
-* `gradle tasks` (elenca i task disponibili)
+* `gradle tasks` (elenca i task disponibili, escludendo quelli non categorizzati)
+* `gradle tasks --all` (elenca tutti i task disponibili)
 * `gradle compileJava` (compila i sorgenti java)
 
 Gradle è in grado capire le *dipendenze* fra task ed eseguirli nell'ordine corretto.
@@ -173,7 +174,7 @@ rootProject.name = "hello-world"
 ## Gradle: Hello World in Java, task e loro utilizzo
 
 * elencare i task disponibili:
-  * `gradle tasks`
+  * `gradle tasks --all`
 * compilazione:
   * `gradle compileJava`
 * pulizia (cancellazione della directory `build` dove Gradle lavora):
