@@ -67,25 +67,11 @@ developers work on a subset of such history
 
 ---
 
-## Google trends to {{< today >}}
+## Google trends to today
 
-<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2884_RC01/embed_loader.js"></script>
-<script type="text/javascript">
-trends.embed.renderExploreWidget(
-  "TIMESERIES",
-  {"comparisonItem":
-    [
-      {"keyword":"/m/05vqwg","geo":"","time":"2004-01-01 {{% today %}}"},
-      {"keyword":"/m/012ct9","geo":"","time":"2004-01-01 {{% today %}}"},
-      {"keyword":"/m/08441_","geo":"","time":"2004-01-01 {{% today %}}"},
-      {"keyword":"/m/09d6g","geo":"","time":"2004-01-01 {{% today %}}" }
-    ],
-    "category":0,
-    "property":""
-  },
-  {"exploreQuery":"date=all&q=%2Fm%2F05vqwg,%2Fm%2F012ct9,%2Fm%2F08441_,%2Fm%2F09d6g","guestPath":"https://trends.google.com:443/trends/embed/"}
-);
-</script>
+<!-- write-here "shared-slides/git/git-trends.md" -->
+
+<!-- end-write -->
 
 ---
 
