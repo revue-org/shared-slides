@@ -79,7 +79,7 @@ developers work on a subset of such history
 
 1. Create a new project
 ```mermaid
-%%{init: { width: '20' 'gitGraph': {'showBranches': false, 'showCommitLabel': false}} }%%
+%%{init: { 'gitGraph': { 'showBranches': false }} }%%
 gitGraph
   commit id: "Initialize project"
 ```
@@ -89,6 +89,7 @@ gitGraph
 2. Make some changes
 
 ```mermaid
+%%{init: { 'gitGraph': { 'showBranches': false }} }%%
 gitGraph
   commit id: "Initialize project"
   commit id: "Make some changes"
@@ -99,6 +100,7 @@ gitGraph
 3. Then more and more, until the project is ready
 
 ```mermaid
+%%{init: { 'gitGraph': { 'showBranches': false }} }%%
 gitGraph
   commit id: "Initialize project"
   commit id: "Make some changes"
@@ -123,6 +125,7 @@ At a first glance, the history of a project *looks like* a **line**.
 # ...things go wrong
 
 ```mermaid
+%%{init: { 'gitGraph': { 'showBranches': false }} }%%
 gitGraph
   commit id: "Initialize project"
   commit id: "Make some changes"
@@ -137,6 +140,7 @@ gitGraph
 Go *back in time* to a previous state where things work
 
 ```mermaid
+%%{init: { 'gitGraph': { 'showBranches': false }} }%%
 gitGraph
   commit id: "init"
   commit id: "okay" type: HIGHLIGHT
@@ -151,6 +155,7 @@ gitGraph
 Then fix the mistake
 
 ```mermaid
+%%{init: { 'gitGraph': { 'mainBranchName': 'master' }} }%%
 gitGraph
   commit id: "init"
   commit id: "okay"
