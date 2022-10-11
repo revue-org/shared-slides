@@ -1,3 +1,54 @@
+## Configuration
+
+Configuration in Git happens at two level
+* **global**: the default options, valid system-wide
+* **repository**: the options specific to a repository. They have *precedence* over the global settings
+
+### Strategy
+
+Set up the global options reasonably,
+then override them at the repository level, if needed.
+
+### `git config`
+
+The `config` subcommand sets the configuration options
+* when operated with the `--global` option, configures the tool globally
+* otherwise, it sets the option for the *current repository*
+  * (there must be a valid repository)
+* Usage: `git config [--global] category.option value`
+  * sets `option` of `category` to `value`
+
+---
+
+## Configuration: main options
+
+As said, `--global` can be omitted to override the global settings locally
+
+### Username and email: `user.name` and `user.email`
+
+A name and a contact are always saved as metadata, so they need to be set up
+
+* `git config --global user.name "Your Real Name"`
+* `git config --global user.email "your.email.address@your.provider"`
+
+### Default editor
+
+Some operations pop up a text editor.
+It is convenient to set it to a tool that you know how to use
+(to prevent, e.g., being "locked" inside `vi` or `vim`).
+Any editor that you can invoke from the terminal works.
+
+* `git config --global core.editor nano`
+
+### Default branch name
+
+How to name the default branch.
+Two reasonable choices are `main` and `master`
+
+* `git config --global init.defaultbranch master`
+
+---
+
 ## Initializing a repository
 
 ### `git init`
