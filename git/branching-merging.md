@@ -33,6 +33,8 @@ flowchart RL
 
 ⬇️ `git branch new-experiment` ⬇️
 
+{{% fragment %}}
+
 ```mermaid
 flowchart RL
 %%  HEAD{{"HEAD fas:fa-unlink"}}
@@ -55,6 +57,8 @@ flowchart RL
 
 `HEAD` does not attach to the new branch by default,
 an explicit `checkout` is required.
+
+{{% /fragment %}}
 
 ---
 
@@ -82,6 +86,10 @@ flowchart RL
 
 {{% fragment %}}
 ⬇️ `git checkout HEAD~4` ⬇️
+
+{{% /fragment %}}
+
+{{% fragment %}}
 
 ```mermaid
 flowchart RL
@@ -142,7 +150,7 @@ flowchart RL
 
 ## Creating branches when in **DETACHED_HEAD**
 
-⬇️ `git checkout -b new-experiment` ⬇️
+⬇️ `git checkout new-experiment` ⬇️
 
 ```mermaid
 flowchart RL
@@ -165,7 +173,13 @@ flowchart RL
 
 * New commits will now be stored!
 
+{{% fragment %}}
+
 ⬇️ [changes] + `git add` + `git commit` ⬇️
+
+{{% /fragment %}}
+
+{{% fragment %}}
 
 ```mermaid
 flowchart RL
@@ -188,6 +202,8 @@ flowchart RL
 ```
 
 $\Rightarrow$ `HEAD` brings our branch forward with it!
+
+{{% /fragment %}}
 
 ---
 
@@ -277,6 +293,8 @@ flowchart RL
 
 ⬇️ `git merge master` ⬇️
 
+{{% fragment %}}
+
 ```mermaid
 flowchart RL
   HEAD{{"HEAD"}}
@@ -298,6 +316,7 @@ flowchart RL
   class C1,C2,C3,C4,C5,C6,C7,C8,C9,C10,C11,C12,C13 commit;
 ```
 
+{{% /fragment %}}
 
 ---
 
@@ -330,6 +349,7 @@ flowchart RL
 * $\Rightarrow$ This is called a **fast-forward**
   * It is the *default behavior* in Git when merging branches where the target is the head plus something
 
+{{% fragment %}}
 
 ```mermaid
 flowchart RL
@@ -349,6 +369,8 @@ flowchart RL
   class b1,b2 branch;
   class C1,C2,C3,C4,C5,C6,C7,C8,C9,C10,C11,C12,C13 commit;
 ```
+
+{{% /fragment %}}
 
 ---
 
