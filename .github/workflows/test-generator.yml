@@ -52,3 +52,16 @@ jobs:
       working-directory: ${{ matrix.target.folder }}
       run: |
         shared-slides/preprocess.rb
+  generator-success:
+    runs-on: ubuntu-latest
+    needs:
+      - ruby-generator-test
+      - existing-websites-test
+    if: >-
+      always() && (
+        contains(join(needs.*.result, ','), 'failure')
+        || !contains(join(needs.*.result, ','), 'cancelled')
+      )
+    steps:
+      - name: Verify that there were no failures
+        run: ${{ !contains(join(needs.*.result, ','), 'failure') }}
