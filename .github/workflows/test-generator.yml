@@ -12,16 +12,40 @@ jobs:
     - uses: actions/checkout@v3.1.0
       with:
         path: shared-slides
-    - uses: actions/checkout@v3.1.0
-      with:
-        repository: DanySK/Course-DTM-SE-3
-        path: target
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1.118.0
       with:
         working-directory: shared-slides
+    - name: Check the Ruby syntax
+      run: ruby -c shared-slides/preprocess.rb
+    - uses: actions/checkout@v3.1.0
+      with:
+        repository: DanySK/Course-DTM-SE-3
+        path: target
     - name: Run tests
       run: |
-        ruby -c shared-slides/preprocess.rb
         shared-slides/preprocess.rb
         [ -s target/content/dvcs-basics/_index.md ]
+  existing-websites-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        target:
+          - DanySK/Course-DTM-SE-3
+          - DanySK/Course-Laboratory-of-Software-Systems
+          - apice-at-disi/oop-lab
+    steps:
+    - uses: actions/checkout@v3.1.0
+      with:
+        path: shared-slides
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1.118.0
+      with:
+        working-directory: shared-slides
+    - uses: actions/checkout@v3.1.0
+      with:
+        repository: ${{ matrix.target }}
+        path: target
+    - name: Run tests
+      run: |
+        shared-slides/preprocess.rb
