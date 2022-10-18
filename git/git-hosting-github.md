@@ -34,20 +34,20 @@ They *enrich* the base git model with services built around the tool:
 
 ## Most common services
 
-* **GitHub**
+* <i class="fa-brands fa-github"></i> **GitHub**
   * Replaced Sourceforge as the *de-facto standard* for open source projects hosting
   * *Academic plan*
-* **GitLab**
+* <i class="fa-brands fa-gitlab"></i> **GitLab**
   * Available for free as *self-hosted*
   * Userbase grew when Microsoft acquired GitHub
-* **Bitbucket**
+* <i class="fa-brands fa-bitbucket"></i> **Bitbucket**
   * From Atlassian
   * Well integrated with other products (e.g., Jira)
 
 
 ---
 
-## GitHub
+## <i class="fa-brands fa-github"></i> GitHub
 
 * *Hosting* for git repositories
 * *Free for open source*
@@ -56,3 +56,46 @@ They *enrich* the base git model with services built around the tool:
 * One *static website* per-project, per-user, and per-organization
   * (a feature exploited by these slides)
 
+---
+
+## <i class="fa-brands fa-github"></i> repositories as remotes: authentication
+
+<i class="fa-brands fa-github"></i> repositories are uniquely identified by an **owner** and a **repository name**
+* `owner/repo` is a name unique to every repository
+
+<i class="fa-brands fa-github"></i> supports two kind of authentications:
+### **HTTPS** -- Requires authentication via token
+* The <i class="fab fa-windows"></i> port of <i class="fa-brands fa-git"></i> should include a graphical authenticator, otherwise:
+    * a token must be generated with `repo` access scope at https://github.com/settings/tokens/new
+    * the URL `https://github.com/owner/repo.git` becomes: `https://token@github.com/owner/repo.git`
+* Recommended to <i class="fab fa-windows"></i> users with no Unix shell
+
+### **Secure Shell (SSH)** -- Requires authentication via public/private key pair
+* Recommended to <i class="fab fa-linux"></i>/<i class="fab fa-apple"></i> users and to those with a working SSH installation
+* The same protocol used to open remote terminals on other systems
+* Tell Github your **public** key and use the **private** (and *secret*) key to authenticate
+
+---
+
+## Configuration of OpenSSH for <i class="fa-brands fa-github"></i>
+
+**Disclaimer**: this is a "quick and dirty" way of generating and using SSH keys.
+You are warmly recommended to learn how it works and [the best security practices](https://archive.ph/3Pn0L).
+
+1. If you don't already have one, generate a new key pair
+    * `ssh-keygen`
+    * You can confirm the default options
+    * You can pick an empty password
+        * <i class="fa-solid fa-arrow-up"></i> your private key will be stored *unencrypted* on your file system
+        * please understand the associated security issues, if you don't, use a password.
+2. Obtain your **public key**
+    * `cat .ssh/id_rsa.pub`
+    * Looks something like:
+    ```text
+    ssh-rsa AAAAB3Nza<snip, a lot of seemingly random chars>PIl+qZfZ9+M= you@your_hostname
+    ```
+3. Create a new key at https://github.com/settings/ssh/new
+    * Provide a title that allows you to identify the key
+    * Paste your key
+
+You are all set! Enjoy your secure authentication.
