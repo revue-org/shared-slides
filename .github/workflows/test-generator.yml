@@ -31,21 +31,23 @@ jobs:
     strategy:
       matrix:
         target:
-          - DanySK/Course-DTM-SE-3
-          - DanySK/Course-Laboratory-of-Software-Systems
-          - apice-at-disi/oop-lab
+          - repo: DanySK/Course-DTM-SE-3
+            folder: '.'
+          - repo: DanySK/Course-Laboratory-of-Software-Systems
+            folder: 'slides'
+          - repo: apice-at-disi/oop-lab
+            folder: 'slides-markdown'
     steps:
     - uses: actions/checkout@v3.1.0
       with:
-        path: shared-slides
+        repository: ${{ matrix.target.repo }}
+    - uses: actions/checkout@v3.1.0
+      with:
+        path: ${{ matrix.target.folder }}/shared-slides
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1.118.0
       with:
-        working-directory: shared-slides
-    - uses: actions/checkout@v3.1.0
-      with:
-        repository: ${{ matrix.target }}
-        path: target
+        working-directory: ${{ matrix.target.folder }}/shared-slides
     - name: Run tests
       run: |
         shared-slides/preprocess.rb
