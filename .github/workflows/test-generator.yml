@@ -49,5 +49,6 @@ jobs:
       with:
         working-directory: ${{ matrix.target.folder }}/shared-slides
     - name: Run tests
+      working-directory: ${{ matrix.target.folder }}
       run: |
         shared-slides/preprocess.rb
