@@ -395,6 +395,7 @@ Changes made on the branch that is being merged in.
 * The (now fixed) files should get added to the stage with `git add`
 * The merge operation can be concluded through `git commit`
   * In case of merge, the message is pre-filled in
+  * If the message is okay, `git commit --no-edit` can be used to use it without editing
 
 ---
 
