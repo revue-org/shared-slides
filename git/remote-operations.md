@@ -12,14 +12,12 @@ Git provides a `clone` subcommand that copies *the whole history* of a repositor
 * The `clone` subcommand checks out the remote branch where the `HEAD` is attached (*default branch*)
 
 Examples:
-```bash
-# creates a local folder called `destination` and copies the repository from the local directory
-git clone /some/repository/on/my/file/system destination
-# creates a local folder called `myfolder` and copies the repository located at the specified `URL`
-git clone https://somewebsite.com/someRepository.git myfolder
-# creates a local folder called `SomeRepo` and copies the repository located at the specified `URL`
-git clone user@sshserver.com:SomePath/SomeRepo.git
-```
+* `git clone /some/repository/on/my/file/system destination`
+  * creates a local folder called `destination` and copies the repository from the local directory
+* `git clone https://somewebsite.com/someRepository.git myfolder`
+  * creates a local folder called `myfolder` and copies the repository located at the specified `URL`
+* `git clone user@sshserver.com:SomePath/SomeRepo.git`
+  * creates a local folder called `SomeRepo` and copies the repository located at the specified `URL`
 
 ---
 
