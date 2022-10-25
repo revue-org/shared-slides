@@ -89,7 +89,7 @@ You are warmly recommended to learn how it works and [the best security practice
         * <i class="fa-solid fa-arrow-up"></i> your private key will be stored *unencrypted* on your file system
         * please understand the associated security issues, if you don't, use a password.
 2. Obtain your **public key**
-    * `cat .ssh/id_rsa.pub`
+    * `cat ~/.ssh/id_rsa.pub`
     * Looks something like:
     ```text
     ssh-rsa AAAAB3Nza<snip, a lot of seemingly random chars>PIl+qZfZ9+M= you@your_hostname
