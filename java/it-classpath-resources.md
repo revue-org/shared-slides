@@ -38,9 +38,7 @@ public abstract class ClassLoader {
 
 ---
 
-
 ### Risorse caricate dal classpath -- Esempi
-
 
 #### Caricamento di File
 
@@ -51,8 +49,6 @@ final String line = br.readLine();
 in.close();
 ```
 
-
-
 #### Caricamento di Immagini
 
 ```java
@@ -61,6 +57,8 @@ final ImageIcon icon = new ImageIcon(imgURL);
 final JLabel lab1 = new JLabel(icon);
 ```
 
+Progetto di esempio:
+https://github.com/unibo-oop/example-with-get-resources
 
 ---
 
