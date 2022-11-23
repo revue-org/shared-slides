@@ -21,7 +21,7 @@ De-facto reference distributed version control system
 
 ## Funny historical introduction
 
-{{< youtube id="4XpnKHJAok8" autoplay="false" title="Linus Torvalds introduces Git at Google">}}
+{{< youtube id="4XpnKHJAok8" autoplay="false" title="Linus Torvalds introduces Git at Google" >}}
 
 ---
 
