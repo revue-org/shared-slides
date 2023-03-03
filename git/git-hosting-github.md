@@ -80,6 +80,7 @@ They *enrich* the base git model with services built around the tool:
 ## Configuration of OpenSSH for <i class="fa-brands fa-github"></i>
 
 **Disclaimer**: this is a "quick and dirty" way of generating and using SSH keys.
+<!-- markdown-link-check-disable-next-line -->
 You are warmly recommended to learn how it works and [the best security practices](https://archive.ph/3Pn0L).
 
 1. If you don't already have one, generate a new key pair
