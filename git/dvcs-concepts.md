@@ -328,13 +328,14 @@ If no branch has been created at the first commit, a default name is used.
 ## DVCS concepts and terminology: *Commit references*
 
 To be able to go *back in time* or *change branch*, we need to **refer to commits**
-
+* 
+* Commit references are also referred to as `tree-ish`es
 * Every commit has a **unique identifier**, which is a valid reference
 * A **branch name** is a valid commit reference (points to the *last commit of that branch*)
-* A special commit name is  **HEAD**, which refers to the *current commit*
+
+### A special commit name is  **HEAD**, which refers to the *current commit*
   * When committing, the **HEAD** moves forward to the new commit
 
-Commit references are also referred to as `tree-ish`es
 
 ### Absolute and relative references
 
@@ -382,52 +383,11 @@ Moves the `HEAD` to the specified *target tree-ish*
 
 ---
 
-## DVCS concepts and terminology: *Head*
-
-A pointer to the **current commit**
-
-```mermaid
-%%{init: { 'gitGraph': { 'mainBranchName': 'default-branch'}} }%%
-gitGraph
-  commit
-  commit
-  commit
-  branch branch2
-  commit
-  checkout default-branch
-  commit
-  checkout branch2
-  branch branch3
-  commit
-  checkout default-branch
-  branch branch4
-  commit
-  commit
-  commit
-  commit
-  checkout branch3
-  merge branch4
-  commit
-  commit
-  commit
-  checkout default-branch
-  merge branch3
-  checkout branch2
-  commit
-  commit
-  merge default-branch
-```
-
-If no branch has been created at the first commit, a default name is used.
-
----
-
 ## Project evolution example
 
 Let us try to see what happens when ve develop some project, step by step.
 
 ---
-
 
 1. first commit
 
