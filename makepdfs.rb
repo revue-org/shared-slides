@@ -18,8 +18,8 @@ puts "Working inside #{root}"
 remote = `git -C '#{root}' remote get-url origin`
 puts "Detected remote: #{remote}"
 url = remote.match(/^(git@|https:\/\/)github\.com(\/|:)(?<owner>[^\/]+)\/(?<repo>[^\/]+?)(\.git)?$/)
-owner = url[:owner]
-repo = url[:repo] == "#{owner}.github.io" ? "" : "/#{url[:repo]}"
+owner = url[:owner].downcase
+repo = (url[:repo] == "#{owner}.github.io" ? "" : "/#{url[:repo]}").downcase
 puts "Detected repo: #{owner}/#{repo}"
 files = Dir.glob("#{root}/**/index.html")
 puts "Detected the following HTML roots:"
