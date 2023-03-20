@@ -1,12 +1,14 @@
 #!/usr/bin/env ruby
+# --disable-web-security does not seem to work anymore since Chrome 111
 command_base = %{
     google-chrome-stable
         --headless
         --run-all-compositor-stages-before-draw
         --disable-gpu
-        --window-size=1440,900
-        --disable-web-security
+        --window-size=1920,1080
         --virtual-time-budget=1000000
+        --disable-audio-output
+        --incognito
         --print-to-pdf=
 }.gsub(/\s+/, " ").strip
 command_end = '?print-pdf&pdfSeparateFragments=false'
