@@ -343,7 +343,7 @@ flowchart RL
   class C1,C2,C3,C4,C5,C6,C7,C8,C9,C10,C11,C12,C13 commit;
 ```
 
-* We want `new-experiment` to also have the changes in `C5` and `C6` (to be up to date with `master`)
+* We want `new-experiment` to also have the changes from `C7`, to `C10` (to be up to date with `master`)
 * `master` contains all the commits of `new-experiment`
 * We don't really need a merge commit, we can just move `new-experiment` to point it to `C6`
 * $\Rightarrow$ This is called a **fast-forward**
