@@ -122,6 +122,10 @@ flowchart RL
   class C1,C2,C3,C4,C5,C6,C7,C8,C9,C10,C11,C12,C13 commit;
 ```
 
+➡️ `git checkout C4 && git tag 1.2.3` ➡️
+
+---
+
 ⬇️ `git checkout C4 && git tag 1.2.3` ⬇️
 
 ```mermaid
@@ -145,3 +149,13 @@ flowchart RL
 ```
 
 `HEAD` cannot attach to tags!
+
+---
+
+## Pushing tags
+
+Tags are **not** pushed by default.
+
+To push tags, use `git push --tags` after a normal push.
+
+Alternatively, use `git push --follow-tags` to push both commits and tags.
