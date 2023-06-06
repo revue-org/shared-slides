@@ -44,5 +44,3 @@ Once done, enable GitHub pages on the repository settings:
   * They are generated from a repository named `<username>.github.io`
 * Organization web-pages are available at `https://<organization>.github.io/`
   * They are generated from a repository named `<organization>.github.io`
-
-
