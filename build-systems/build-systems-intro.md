@@ -1,4 +1,4 @@
-# The build "life cycle"
+## The build "life cycle"
 #### (Not to be confused with the system development life cycle (SDLC))
 
 The process of creating *tested deployable software artifacts*
@@ -19,7 +19,7 @@ May include, depending on the system specifics:
 
 ---
 
-# Lifecycle styles
+## Lifecycle styles
 
 * **Custom**: select some phases that the product needs and perform them.
     * *Flexible and configurable*: tailored on each project's needs
@@ -31,7 +31,7 @@ May include, depending on the system specifics:
 
 ---
 
-# Build automation
+## Build automation
 
 Automation of the build lifecycle
 
