@@ -33,6 +33,8 @@ jobs:
         target:
           - repo: DanySK/Course-DTM-SE-3
             folder: '.'
+          - repo: unibo-spe/spe-slides
+            folder: '.'
           - repo: DanySK/Course-Laboratory-of-Software-Systems
             folder: 'slides'
           - repo: apice-at-disi/oop-lab
