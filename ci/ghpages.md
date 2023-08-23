@@ -13,7 +13,7 @@ Documentation of a project is **part of the project**
   * (generation is a bit richer, but just to make the point)
 * Supports *Jekyll* (a Ruby framework for static website generation) out of the box
   * We will not discuss it today
-  * But maybe in LSS...
+  * But maybe in Software Process Engineering...
 
 ---
 
