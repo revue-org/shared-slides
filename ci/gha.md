@@ -123,25 +123,25 @@ and many are developed by the community.
 
 ## Workflow minimal example
 
-{{< github repo="Tutorial-GitHub-Actions-Minimal" path=".github/workflows/workflow-example.yml" to=20 >}}
+{{< github owner="DanySK" repo="Tutorial-GitHub-Actions-Minimal" path=".github/workflows/workflow-example.yml" to=20 >}}
 
 ---
 
 ## Workflow minimal example
 
-{{< github repo="Tutorial-GitHub-Actions-Minimal" path=".github/workflows/workflow-example.yml" from=22 to=39 >}}
+{{< github owner="DanySK" repo="Tutorial-GitHub-Actions-Minimal" path=".github/workflows/workflow-example.yml" from=22 to=39 >}}
 
 ---
 
 ## Workflow minimal example
 
-{{< github repo="Tutorial-GitHub-Actions-Minimal" path=".github/workflows/workflow-example.yml" from=40 to=60 >}}
+{{< github owner="DanySK" repo="Tutorial-GitHub-Actions-Minimal" path=".github/workflows/workflow-example.yml" from=40 to=60 >}}
 
 ---
 
 ## Workflow minimal example
 
-{{< github repo="Tutorial-GitHub-Actions-Minimal" path=".github/workflows/workflow-example.yml" from=61 >}}
+{{< github owner="DanySK" repo="Tutorial-GitHub-Actions-Minimal" path=".github/workflows/workflow-example.yml" from=61 >}}
 
 ---
 
@@ -236,7 +236,7 @@ By default, GitHub actions' *runners do **not** check out the repository*
 
 It is a *common* and *non-trivial* operation (the checked out version must be the version originating the workflow), thus GitHub provides an action:
 
-{{< github repo="Tutorial-GitHub-Actions-Minimal" path=".github/workflows/workflow-example.yml" from=46 to=47 >}}
+{{< github owner="DanySK" repo="Tutorial-GitHub-Actions-Minimal" path=".github/workflows/workflow-example.yml" from=46 to=47 >}}
 
 Since actions typically do not need the entire history of the project, by default the action checks out *only the commit that originated the workflow* (`--depth=1` when cloning)
 * *Shallow cloning* has better *performance*
@@ -249,7 +249,7 @@ Also, *__tags__ don't get checked out*
 
 ## Checking out the whole history
 
-{{< github repo="action-checkout" path="action.yml" from=19 >}}
+{{< github owner="DanySK" repo="action-checkout" path="action.yml" from=19 >}}
 
 (code from a custom action, ignore the `if`)
 
@@ -271,7 +271,7 @@ In particular, actions can set outputs by printing:
 <br>
 `::set-output name={name}::{value}`
 
-{{< github repo="Tutorial-GitHub-Actions-Minimal" path=".github/workflows/use-step-outputs.yml" from=6 >}}
+{{< github owner="DanySK" repo="Tutorial-GitHub-Actions-Minimal" path=".github/workflows/use-step-outputs.yml" from=6 >}}
 
 ---
 
@@ -295,7 +295,7 @@ The solution is the adoption of a **build matrix**
 
 ## Build matrix in GHA
 
-{{< github repo="Tutorial-GitHub-Actions-Minimal" path=".github/workflows/workflow-matrix.yml" from=19 >}}
+{{< github owner="DanySK" repo="Tutorial-GitHub-Actions-Minimal" path=".github/workflows/workflow-matrix.yml" from=19 >}}
 
 ---
 
