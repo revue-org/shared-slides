@@ -3,7 +3,7 @@
 We applied DevOps (and microservice-ification) to an existing software project,
 measuring some metrics *before* and *after* the operation.
 
-* The detailed *experience report* has been presented at the 37th International Conference on Software Maintenance and Evolution ([ICSME 2021](https://icsme2021.github.io/)) 
+* The detailed *experience report* has been presented at the 37th International Conference on Software Maintenance and Evolution ([ICSME 2021](https://icsme2021.github.io/))
     * [Scientific paper](https://doi.org/10.1109/ICSME52107.2021.00051)
 
 ---
@@ -42,15 +42,15 @@ measuring some metrics *before* and *after* the operation.
 
 | Metric         | Prev.           | Now  | Change |
 | :-------------|:-------------:| :-----:| ---: |
-| Release frequency ($\frac{releases}{day}$) | [0.071]() | 
-| Commit to release time (hours) |   [8 to 24]() | 
-| Commits per day ($\frac{commits}{day}$) | [2]() | 
-| MTTR (hours) | [36]() | 
-| Prod. env. setup (working hours) | [16]() | 
+| Release frequency ($\frac{releases}{day}$) | [0.071]() |
+| Commit to release time (hours) |   [8 to 24]() |
+| Commits per day ($\frac{commits}{day}$) | [2]() |
+| MTTR (hours) | [36]() |
+| Prod. env. setup (working hours) | [16]() |
 | Dev. env. setup (minutes) | [120]() |
-| Nightly downtime ($\frac{minutes}{night}$) | [30]() | 
-| Support ticket frequency ($\frac{tickets}{month}$) | [40]() | 
-| Issue resolution time (days) | [4]() |  | 
+| Nightly downtime ($\frac{minutes}{night}$) | [30]() |
+| Support ticket frequency ($\frac{tickets}{month}$) | [40]() |
+| Issue resolution time (days) | [4]() |  |
 
 
 ---
@@ -71,15 +71,31 @@ measuring some metrics *before* and *after* the operation.
 
 | Metric         | Prev.           | Now  | Change |
 | :-------------|:-------------:| :-----:| ---: |
-| Release frequency ($\frac{releases}{day}$) | [0.071]() | *2.7* | **+3700%**
-| Commit to release time (hours) |   [8 to 24]() | 
-| Commits per day ($\frac{commits}{day}$) | [2]() | 
-| MTTR (hours) | [36]() | 
-| Prod. env. setup (working hours) | [16]() | 
+| Release frequency ($\frac{releases}{day}$) | [0.071]() | |
+| Commit to release time (hours) |   [8 to 24]() |
+| Commits per day ($\frac{commits}{day}$) | [2]() |
+| MTTR (hours) | [36]() |
+| Prod. env. setup (working hours) | [16]() |
 | Dev. env. setup (minutes) | [120]() |
-| Nightly downtime ($\frac{minutes}{night}$) | [30]() | 
-| Support ticket frequency ($\frac{tickets}{month}$) | [40]() | 
-| Issue resolution time (days) | [4]() |  | 
+| Nightly downtime ($\frac{minutes}{night}$) | [30]() |
+| Support ticket frequency ($\frac{tickets}{month}$) | [40]() |
+| Issue resolution time (days) | [4]() |  |
+
+---
+
+{{< slide transition="none" >}}
+
+| Metric         | Prev.           | Now  | Change |
+| :-------------|:-------------:| :-----:| ---: |
+| Release frequency ($\frac{releases}{day}$) | [0.071]() | *2.7* | **+3700%**
+| Commit to release time (hours) |   [8 to 24]() |
+| Commits per day ($\frac{commits}{day}$) | [2]() |
+| MTTR (hours) | [36]() |
+| Prod. env. setup (working hours) | [16]() |
+| Dev. env. setup (minutes) | [120]() |
+| Nightly downtime ($\frac{minutes}{night}$) | [30]() |
+| Support ticket frequency ($\frac{tickets}{month}$) | [40]() |
+| Issue resolution time (days) | [4]() |  |
 
 ---
 
@@ -89,13 +105,13 @@ measuring some metrics *before* and *after* the operation.
 | :-------------|:-------------:| :-----:| ---: |
 | Release frequency ($\frac{releases}{day}$) | [0.071]() | *2.7* | **+3700%**
 | Commit to release time (hours) |   [8 to 24]() | *0.19* | **~ -98.5%**
-| Commits per day ($\frac{commits}{day}$) | [2]() | 
-| MTTR (hours) | [36]() | 
-| Prod. env. setup (working hours) | [16]() | 
+| Commits per day ($\frac{commits}{day}$) | [2]() |
+| MTTR (hours) | [36]() |
+| Prod. env. setup (working hours) | [16]() |
 | Dev. env. setup (minutes) | [120]() |
-| Nightly downtime ($\frac{minutes}{night}$) | [30]() | 
-| Support ticket frequency ($\frac{tickets}{month}$) | [40]() | 
-| Issue resolution time (days) | [4]() |  | 
+| Nightly downtime ($\frac{minutes}{night}$) | [30]() |
+| Support ticket frequency ($\frac{tickets}{month}$) | [40]() |
+| Issue resolution time (days) | [4]() |  |
 
 
 ---
@@ -108,12 +124,12 @@ measuring some metrics *before* and *after* the operation.
 | Release frequency ($\frac{releases}{day}$) | [0.071]() | *2.7* | **+3700%**
 | Commit to release time (hours) |   [8 to 24]() | *0.19* | **~ -98.5%**
 | Commits per day ($\frac{commits}{day}$) | [2]() | *7.1* | **+255%**
-| MTTR (hours) | [36]() | 
-| Prod. env. setup (working hours) | [16]() | 
+| MTTR (hours) | [36]() |
+| Prod. env. setup (working hours) | [16]() |
 | Dev. env. setup (minutes) | [120]() |
-| Nightly downtime ($\frac{minutes}{night}$) | [30]() | 
-| Support ticket frequency ($\frac{tickets}{month}$) | [40]() | 
-| Issue resolution time (days) | [4]() |  | 
+| Nightly downtime ($\frac{minutes}{night}$) | [30]() |
+| Support ticket frequency ($\frac{tickets}{month}$) | [40]() |
+| Issue resolution time (days) | [4]() |  |
 
 ---
 
@@ -126,11 +142,11 @@ measuring some metrics *before* and *after* the operation.
 | Commit to release time (hours) |   [8 to 24]() | *0.19* | **~ -98.5%**
 | Commits per day ($\frac{commits}{day}$) | [2]() | *7.1* | **+255%**
 | MTTR (hours) | [36]() | *0.5* | **-98.6%**
-| Prod. env. setup (working hours) | [16]() | 
+| Prod. env. setup (working hours) | [16]() |
 | Dev. env. setup (minutes) | [120]() |
-| Nightly downtime ($\frac{minutes}{night}$) | [30]() | 
-| Support ticket frequency ($\frac{tickets}{month}$) | [40]() | 
-| Issue resolution time (days) | [4]() |  | 
+| Nightly downtime ($\frac{minutes}{night}$) | [30]() |
+| Support ticket frequency ($\frac{tickets}{month}$) | [40]() |
+| Issue resolution time (days) | [4]() |  |
 
 ---
 
@@ -144,9 +160,9 @@ measuring some metrics *before* and *after* the operation.
 | MTTR (hours) | [36]() | *0.5* | **-98.6%**
 | Prod. env. setup (working hours) | [16]() | *0.35* | **-97.8%**
 | Dev. env. setup (minutes) | [120]() |
-| Nightly downtime ($\frac{minutes}{night}$) | [30]() | 
-| Support ticket frequency ($\frac{tickets}{month}$) | [40]() | 
-| Issue resolution time (days) | [4]() |  | 
+| Nightly downtime ($\frac{minutes}{night}$) | [30]() |
+| Support ticket frequency ($\frac{tickets}{month}$) | [40]() |
+| Issue resolution time (days) | [4]() |  |
 
 ---
 
@@ -160,9 +176,9 @@ measuring some metrics *before* and *after* the operation.
 | MTTR (hours) | [36]() | *0.5* | **-98.6%**
 | Prod. env. setup (working hours) | [16]() | *0.35* | **-97.8%**
 | Dev. env. setup (minutes) | [120]() | *9* | **-92.5%**
-| Nightly downtime ($\frac{minutes}{night}$) | [30]() | 
-| Support ticket frequency ($\frac{tickets}{month}$) | [40]() | 
-| Issue resolution time (days) | [4]() |  | 
+| Nightly downtime ($\frac{minutes}{night}$) | [30]() |
+| Support ticket frequency ($\frac{tickets}{month}$) | [40]() |
+| Issue resolution time (days) | [4]() |  |
 
 ---
 
@@ -177,8 +193,8 @@ measuring some metrics *before* and *after* the operation.
 | Prod. env. setup (working hours) | [16]() | *0.35* | **-97.8%**
 | Dev. env. setup (minutes) | [120]() | *9* | **-92.5%**
 | Nightly downtime ($\frac{minutes}{night}$) | [30]() | *0* | **-100%**
-| Support ticket frequency ($\frac{tickets}{month}$) | [40]() | 
-| Issue resolution time (days) | [4]() |  | 
+| Support ticket frequency ($\frac{tickets}{month}$) | [40]() |
+| Issue resolution time (days) | [4]() |  |
 
 ---
 
@@ -194,7 +210,7 @@ measuring some metrics *before* and *after* the operation.
 | Dev. env. setup (minutes) | [120]() | *9* | **-92.5%**
 | Nightly downtime ($\frac{minutes}{night}$) | [30]() | *0* | **-100%**
 | Support ticket frequency ($\frac{tickets}{month}$) | [40]() | *19* | **-52.5%**
-| Issue resolution time (days) | [4]() |  | 
+| Issue resolution time (days) | [4]() |  |
 
 ---
 
