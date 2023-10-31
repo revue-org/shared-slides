@@ -169,7 +169,7 @@ Maven definì un *repository* (archivio) dove i creatori di software Java *open 
 La disponibilità e la possibilità di **riuso** ha consentito la nascita dell'"ecosistema" Java,
 rendendolo uno dei linguaggi/piattaforme di più ampio successo di sempre.
 
-### https://central.sonatype.dev/ (storicamente: https://search.maven.org/)
+### https://central.sonatype.com/ (storicamente: https://search.maven.org/)
 
 * È possibile trovare moltissime librerie!
 * Oltre a scaricarle, sono documentate le *dipendenze*, che andranno a loro volta scaricate...
@@ -226,7 +226,7 @@ Siamo pronti per importare le librerie che vogliamo!
 Dobbiamo solo:
 1. Trovare su Maven Central la libreria che intendiamo usare e annotare `groupId`, `artifactId`, e `version`
     * per questo esempio: la libreria OMDB di "Omertron"
-      * https://central.sonatype.dev/artifact/com.omertron/API-OMDB/1.5
+      * https://central.sonatype.com/artifact/com.omertron/API-OMDB/1.5
       * `com.omertron:API-OMDB:1.5`
 2. Capire quale sia il suo *scope*
 
