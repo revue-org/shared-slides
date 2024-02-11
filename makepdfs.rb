@@ -41,7 +41,7 @@ max_attempts_format = 10
 for name, path in paths do
     puts "Working on #{name} built from #{path}"
     output = "#{name}_slides.pdf"
-    command = "timeout 2m #{command_base}#{output} '#{path}'"
+    command = "timeout 5m #{command_base}#{output} '#{path}'"
     attempt = 0
     attempts_for_format = 1
     size = 0
