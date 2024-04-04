@@ -97,7 +97,7 @@ There are non-free open source licenses:
 * Nasa Open Source Agreement
 
 And there are free non-open source licenses as well
-* WTFPL $\Rightarrow$ ["public domain" is undefined in EU legislation](https://opensource.org/minutes20090304)
+* WTFPL $\Rightarrow$ ["public domain" is undefined in EU legislation](https://archive.is/ID4VQ)
 * Netscape public license
 * OpenSSL license
 
