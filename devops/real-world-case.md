@@ -8,7 +8,7 @@ measuring some metrics *before* and *after* the operation.
 
 ---
 
-{{% youtube 6qd6GG3XQXA %}}
+{{< youtube 6qd6GG3XQXA >}}
 
 ---
 
